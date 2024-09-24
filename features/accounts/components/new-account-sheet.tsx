@@ -14,16 +14,16 @@ import {
     SheetTitle,
 } from "@/components/ui/sheet";
 
+const formSchema = insertAccountSchema.pick({
+    name: true,
+});
+
+type FormValues = z.input<typeof formSchema>;
+
 export const NewAccountSheet = () => {
     const { isOpen, onClose } = useNewAccount();
 
     const mutation = useCreateAccount();
-
-    const formSchema = insertAccountSchema.pick({
-        name: true,
-    });
-
-    type FormValues = z.input<typeof formSchema>;
 
     const onSubmit = (values: FormValues) => {
         mutation.mutate(values, {
@@ -39,7 +39,7 @@ export const NewAccountSheet = () => {
                 <SheetHeader>
                     <SheetTitle>New Account</SheetTitle>
                     <SheetDescription>
-                        Creat new account to track your transsactions.
+                        Creat new account to track your transactions.
                     </SheetDescription>
                 </SheetHeader>
                 <AccountForm

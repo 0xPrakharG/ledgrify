@@ -39,7 +39,7 @@ export const NewCategorySheet = () => {
                 <SheetHeader>
                     <SheetTitle>New Category</SheetTitle>
                     <SheetDescription>
-                        Creat a new category to track your transsactions.
+                        Creat a new category to track your transactions.
                     </SheetDescription>
                 </SheetHeader>
                 <CategoryForm
