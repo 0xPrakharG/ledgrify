@@ -4,7 +4,7 @@ import { CategoryForm } from "@/features/categories/components/category-form";
 import { useNewCategory } from "@/features/categories/hooks/use-new-category";
 import { useCreateCategory } from "@/features/categories/api/use-create-category";
 
-import { insertCategorysSchema } from "@/db/schema";
+import { insertCategorySchema } from "@/db/schema";
 
 import {
     Sheet,
@@ -19,7 +19,7 @@ export const NewCategorySheet = () => {
 
     const mutation = useCreateCategory();
 
-    const formSchema = insertCategorysSchema.pick({
+    const formSchema = insertCategorySchema.pick({
         name: true,
     });
 

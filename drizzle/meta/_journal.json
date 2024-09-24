@@ -15,6 +15,13 @@
       "when": 1727091230350,
       "tag": "0001_omniscient_meteorite",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1727168556623,
+      "tag": "0002_glamorous_typhoid_mary",
+      "breakpoints": true
     }
   ]
 }

@@ -8,7 +8,7 @@ import { useEditCategory } from "@/features/categories/api/use-edit-category";
 import { useDeleteCategory } from "@/features/categories/api/use-delete-category";
 
 import { useConfirm } from "@/hooks/use-confirm";
-import { insertCategorysSchema } from "@/db/schema";
+import { insertCategorySchema } from "@/db/schema";
 
 import {
     Sheet,
@@ -18,7 +18,7 @@ import {
     SheetTitle,
 } from "@/components/ui/sheet";
 
-const formSchema = insertCategorysSchema.pick({
+const formSchema = insertCategorySchema.pick({
     name: true,
 });
 

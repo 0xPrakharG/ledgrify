@@ -8,7 +8,7 @@ import { AccountForm } from "@/features/accounts/components/account-form";
 import { useOpenAccount } from "@/features/accounts/hooks/use-open-account";
 
 import { useConfirm } from "@/hooks/use-confirm";
-import { insertAccountsSchema } from "@/db/schema";
+import { insertAccountSchema } from "@/db/schema";
 
 import {
     Sheet,
@@ -18,7 +18,7 @@ import {
     SheetTitle,
 } from "@/components/ui/sheet";
 
-const formSchema = insertAccountsSchema.pick({
+const formSchema = insertAccountSchema.pick({
     name: true,
 });
 

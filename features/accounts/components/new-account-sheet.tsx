@@ -4,7 +4,7 @@ import { useCreateAccount } from "@/features/accounts/api/use-create-account";
 import { AccountForm } from "@/features/accounts/components/account-form";
 import { useNewAccount } from "@/features/accounts/hooks/use-new-account";
 
-import { insertAccountsSchema } from "@/db/schema";
+import { insertAccountSchema } from "@/db/schema";
 
 import {
     Sheet,
@@ -19,7 +19,7 @@ export const NewAccountSheet = () => {
 
     const mutation = useCreateAccount();
 
-    const formSchema = insertAccountsSchema.pick({
+    const formSchema = insertAccountSchema.pick({
         name: true,
     });
 
