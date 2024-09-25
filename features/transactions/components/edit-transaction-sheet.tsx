@@ -96,7 +96,9 @@ export const EditTransactionSheet = () => {
         ? {
               accountId: transactionQuery.data.accountId,
               categoryId: transactionQuery.data.categoryId,
-              amount: convertAmountFromMiliunits(transactionQuery.data.amount),
+              amount: convertAmountFromMiliunits(
+                  transactionQuery.data.amount
+              ).toString(),
               date: transactionQuery.data.date
                   ? new Date(transactionQuery.data.date)
                   : new Date(),
