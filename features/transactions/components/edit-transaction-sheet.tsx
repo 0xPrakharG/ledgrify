@@ -23,6 +23,7 @@ import {
     SheetHeader,
     SheetTitle,
 } from "@/components/ui/sheet";
+import { convertAmountFromMiliunits } from "@/lib/utils";
 
 const formSchema = insertTransactionSchema.omit({
     id: true,
@@ -95,7 +96,7 @@ export const EditTransactionSheet = () => {
         ? {
               accountId: transactionQuery.data.accountId,
               categoryId: transactionQuery.data.categoryId,
-              amount: transactionQuery.data.amount.toString(),
+              amount: convertAmountFromMiliunits(transactionQuery.data.amount),
               date: transactionQuery.data.date
                   ? new Date(transactionQuery.data.date)
                   : new Date(),
